@@ -1,0 +1,293 @@
+/*
+VARIABLES
+================================================ */
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --brown: #403632;
+    --light-grey: #eee;
+    --light-blue: #5ddafc;
+    --white: #fff;
+    --oswald-font: 'Oswald', sans-serif;
+}
+
+/* Reset
+================================================ */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+COMMON
+================================================ */
+p {
+    line-height: 1.7;
+}
+img {
+    max-width: 100%;
+}
+.title {
+    font-family: var(--oswald-font);
+    font-size: min(10vw, 4rem);
+    margin-bottom: 2rem;
+}
+.btn {
+    color: var(--white);
+    background: var(--brown);
+    border: 1px solid var(--brown);
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+    margin: 2rem 0;
+    transition: .4s;
+}
+.fadein {
+    opacity: 0;
+}
+
+/* Base Styles
+================================================ */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #0078d7;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    float: inline-end;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffe500;
+}
+
+/*
+LOADING
+================================================ */
+#loading {
+    background-color: var(--light-grey);
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+#loading-screen {
+    background-color: var(--light-blue);
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    translate: 0 100vh;
+}
+#loading p {
+    font-size: 2rem;
+    font-family: var(--oswald-font);
+}
+
+/* Hero Section
+================================================ */
+
+.hero {
+    height: 100vh;
+    position: relative;
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 400px 10%;
+}
+
+.hero .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+    width: 100%;
+    font-size: max(12vw, 3rem);
+    line-height: 1.2;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content .btn {
+    background: #0078d7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background: #0056a4;
+}
+
+/* Main Content
+================================================ */
+main {
+    padding: 40px 10%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #0078d7;
+    margin-bottom: 10px;
+}
+
+section p, ul {
+    margin-top: 10px;
+}
+
+.portfolio-items {
+    display: flex;
+    gap: 20px;
+}
+
+.portfolio-items .item {
+    flex: 1;
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-items .item:hover {
+    transform: scale(1.05);
+}
+
+/*
+GALLERY
+================================================ */
+.gallery {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.gallery-image {
+    width: min(50%, calc(38rem - 2rem));
+    margin: auto;
+    position: relative;
+}
+.gallery-image::after {
+    display: block;
+    content: '';
+    width: calc(100% - 2rem);
+    height: calc(100% - 2.5rem);
+    z-index: 3;
+    border: 3px solid var(--white);
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+}
+.gallery-image img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    width: 100%;
+}
+.gallery-thumbnails {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    margin: 1rem 0;
+}
+.gallery-thumbnails img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    cursor: pointer;
+    width: 70%;
+}
+
+/* Contact Form
+================================================ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #0078d7;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #0056a4;
+}
+
+/* Footer
+================================================ */
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design
+================================================ */
+
+@media (max-width: 768px) {
+    header, .hero, main {
+        padding: 20px;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+    }
+}

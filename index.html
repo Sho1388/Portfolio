@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Creator Sho</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo-square.png" type="image/svg+xml">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading">
+        <p>Loading...</p>
+        <div id="loading-screen"></div>
+     </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo-square.png" width="20%" height="20%" alt="headerlogo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#studying">Studying</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/logo-square.png">
+            <h2>Welcome to My webpage</h2>
+            <p>Web Design and Development Trainee</p>
+            <a href="#about" class="btn">Explore About Me</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section id="about">
+            <h2 class="title fadein">About</h2>
+            <p class="fadein">高知県高知市出身<br>
+            20年近く社会人経験を経てITエンジニアに憧れを抱くようになり、一念発起し専門学校に入学<br>
+            40歳でITエンジニアデビューを目指す<br>
+            趣味は写真とサウナ、ウマ娘好き</p>
+        </section>
+
+        <section id="studying">
+            <h2 class="title fadein">Studying</h2>
+            <ul>
+                <li class="fadein">Webデザイン</li>
+                <li class="fadein">Web開発</li>
+                <li class="fadein">ソフトウェア開発</li>
+                <li class="fadein">写真</li>
+            </ul>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="gallery-image">
+                <img src="images/img1.jpg" alt="">
+            </div>
+            <div class="gallery-content wrapper">
+                <h2 class="title fadein">Photo Gallery</h2>
+                <ul class="gallery-thumbnails">
+                    <li class="fadein"><img src="images/img1.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img2.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img3.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img4.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img5.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img6.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img7.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img8.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img9.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/img10.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="title fadein">Contact</h2>
+            <form action="send_mail.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>            
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Web Creator Sho. All rights reserved.</p>
+    </footer>
+</body>
+</html>
